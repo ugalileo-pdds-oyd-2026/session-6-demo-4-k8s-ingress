@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: demo-app
+data:
+  PORT: "8080"
+  COMPUTE_TYPE: "eks"   # same env var read by main.go — no image change needed
+  ENV: "dev"
